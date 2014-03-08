@@ -47,8 +47,12 @@ javacOptions in doc := Seq(
   "-source", "1.6"
 )
 
+compileOrder := CompileOrder.Mixed
+
 unmanagedSourceDirectories in Test := Nil
+
+EclipseKeys.eclipseOutput := Some(".target")
 
 EclipseKeys.executionEnvironment := Some(EclipseExecutionEnvironment.JavaSE16)
 
-libraryDependencies += organization.value % "age-verification-interface" % "0.0.0-SNAPSHOT"
+libraryDependencies += organization.value % "age-verificator-interface" % "0.0.0-SNAPSHOT"

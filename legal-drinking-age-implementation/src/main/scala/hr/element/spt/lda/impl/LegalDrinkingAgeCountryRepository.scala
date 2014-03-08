@@ -1,5 +1,6 @@
 package hr.element.spt
-package lda.impl
+package lda
+package impl
 
 private [impl] object NoAgeVerification
     extends AgeVerificator {
@@ -14,10 +15,11 @@ private [impl] class ThresholdAgeVerification(threshold: Int)
   }
 }
 
-/** A mock implementation of a countries legal drinking age limits,
+/**
+ * A mock implementation of a countries legal drinking age limits,
  *  for the purposes of a reasonably complete implementation.
  */
-private [lda] object LegalDrinkingAgeCountryRepository {
+private[lda] object LegalDrinkingAgeCountryRepository {
   def createAgeVerifier(country: Country) =
     country match {
       case Country.CU | Country.NO =>

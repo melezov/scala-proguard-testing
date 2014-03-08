@@ -26,6 +26,8 @@ unmanagedSourceDirectories in Compile := (javaSource in Compile).value :: Nil
 
 unmanagedSourceDirectories in Test := Nil
 
+EclipseKeys.eclipseOutput := Some(".target")
+
 EclipseKeys.executionEnvironment := Some(EclipseExecutionEnvironment.JavaSE16)
 
 EclipseKeys.projectFlavor := EclipseProjectFlavor.Java

@@ -1,6 +1,6 @@
 organization := "hr.element.spt"
 
-name := "age-verification-interface"
+name := "age-verificator-interface"
 
 version := "0.0.0-SNAPSHOT"
 
@@ -25,6 +25,8 @@ autoScalaLibrary := false
 unmanagedSourceDirectories in Compile := (javaSource in Compile).value :: Nil
 
 unmanagedSourceDirectories in Test := Nil
+
+EclipseKeys.eclipseOutput := Some(".target")
 
 EclipseKeys.executionEnvironment := Some(EclipseExecutionEnvironment.JavaSE16)
 
